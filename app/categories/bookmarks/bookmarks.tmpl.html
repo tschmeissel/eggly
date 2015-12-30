@@ -1,7 +1,6 @@
-<div>
-	<div ng-repeat="bookmark in vm.bookmarks | filter:{category:vm.currentCategory.name} ">
-		<button type="button"><span>Edit</span></button>
-		<a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
-		<button type="button">&times;</button>
-	</div>
+<h1>{{vm.currentCategory.name}}</h1>
+<div ng-repeat="bookmark in vm.bookmarks | filter:{category:vm.currentCategory.name} ">
+	<button type="button"><span>Edit</span></button>
+	<a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
+	<button type="button">&times;</button>
 </div>

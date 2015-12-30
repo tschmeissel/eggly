@@ -18,8 +18,8 @@
 	})
 	
 	bookmarks.controller('BookmarksCtrl', function($scope, $stateParams, $log) {
-//		$scope.currentCategoryName = $stateParams.category;
-//		$log.debug('current category: ' + $scope.currentCategoryName);
+		// e.g. http://localhost:8080/eggly/#/categories/Design => $stateParams.category == 'Design'
+		$log.debug('current category: ' + $stateParams.category);
 	})
 	
 })();
