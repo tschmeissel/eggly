@@ -6,7 +6,7 @@
 	categories.config(function($stateProvider) {
 
 		$stateProvider
-			.state('cookbook.categories', {
+			.state('eggly.categories', {
 				url: '/',
 				// this state cotains these two views
 				views: {

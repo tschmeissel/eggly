@@ -6,7 +6,7 @@
 	bookmarks.config(function($stateProvider) {
 		
 		$stateProvider
-			.state('cookbook.categories.bookmarks', {
+			.state('eggly.categories.bookmarks', {
 				url: 'categories/:category',
 				views: {
 					'bookmarks@': {
@@ -18,8 +18,8 @@
 	})
 	
 	bookmarks.controller('BookmarksCtrl', function($scope, $stateParams, $log) {
-		$scope.currentCategoryName = $stateParams.category;
-		$log.debug('current category: ' + $scope.currentCategoryName);
+//		$scope.currentCategoryName = $stateParams.category;
+//		$log.debug('current category: ' + $scope.currentCategoryName);
 	})
 	
 })();

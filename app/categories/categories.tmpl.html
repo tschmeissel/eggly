@@ -1,5 +1,5 @@
 <ul>
-<li>Grundlagen</li>
-<li>Nudeln</li>
-<li>Suppen</li>
+	<li ng-repeat="category in vm.categories">
+		<a href="#" ng-click="vm.setCurrentCategory(category)">{{category.name}}</a>
+	</li>
 </ul>
