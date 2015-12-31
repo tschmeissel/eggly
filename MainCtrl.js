@@ -35,9 +35,9 @@
 			$log.debug('set category: ' + category.name);
 			vm.currentCategory = category;
 			
-			$state.go('eggly.categories.bookmarks', {
-				category:category.name
-			})
+//			$state.go('eggly.categories.bookmarks', {
+//				category:category.name
+//			})
 		}
 		
 		vm.setCurrentCategory = setCurrentCategory;
