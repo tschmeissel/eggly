@@ -1,0 +1,11 @@
+<!-- set category by click
+<div ng-repeat="bookmark in vm.bookmarks | filter:{category:vm.currentCategory.name} ">
+-->
+<!-- set category by state param
+-->
+<div ng-repeat="bookmark in vm.bookmarks | filter:{category:bookmarks.currentCategoryName} ">
+
+	<button type="button"><span>Edit</span></button>
+	<a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
+	<button type="button">&times;</button>
+</div>
