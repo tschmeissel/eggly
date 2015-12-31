@@ -3,7 +3,7 @@
 -->
 <!-- set category by state param
 -->
-<div ng-repeat="bookmark in vm.bookmarks | filter:{category:currentCategoryName} ">
+<div ng-repeat="bookmark in vm.bookmarks | filter:{category:bookmarks.currentCategoryName} ">
 
 	<button type="button"><span>Edit</span></button>
 	<a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>

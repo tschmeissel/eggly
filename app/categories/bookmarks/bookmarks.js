@@ -11,7 +11,7 @@
 				views: {
 					'bookmarks@': {
 						templateUrl: 'app/categories/bookmarks/bookmarks.tmpl.html',
-						controller: 'BookmarksCtrl',
+						controller: 'BookmarksCtrl as bookmarks',
 					}
 				}
 			})
@@ -19,12 +19,14 @@
 		console.log('bookmarks module config called');
 	})
 	
-	bookmarks.controller('BookmarksCtrl', function($scope, $stateParams, $log) {
+	bookmarks.controller('BookmarksCtrl', function($stateParams, $log) {
 		// e.g. http://localhost:8080/eggly/#/categories/Design => $stateParams.category == 'Design'
 		$log.debug('current category: ' + $stateParams.category);
 		
+		var bookmarks = this;
+		
 		// set the category name in this state so it can be accessed from the template
-		$scope.currentCategoryName = $stateParams.category;
+		bookmarks.currentCategoryName = $stateParams.category;
 	})
 	
 })();
