@@ -1,0 +1,8 @@
+<ul>
+	<li ng-repeat="category in vm.categories">
+		<!--
+		<a href="#" ng-click="vm.setCurrentCategory(category)">{{category.name}}</a>
+		-->
+		<a ui-sref="eggly.categories.bookmarks({category:category.name})" ng-click="vm.setCurrentCategory(category)">{{category.name}}</a>
+	</li>
+</ul>
