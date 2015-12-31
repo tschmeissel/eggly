@@ -5,9 +5,9 @@
 		.module('egglyApp')
 		.controller('MainCtrl', MainCtrl);
 
-	MainCtrl.$inject = ['$log'];
+	MainCtrl.$inject = ['$log', '$state'];
 		
-	function MainCtrl($log) {
+	function MainCtrl($log, $state) {
 		var vm = this; // vm = view model
 		
 		vm.categories = [
@@ -34,6 +34,10 @@
 		function setCurrentCategory(category) {
 			$log.debug('set category: ' + category.name);
 			vm.currentCategory = category;
+			
+			$state.go('eggly.categories.bookmarks', {
+				category:category.name
+			})
 		}
 		
 		vm.setCurrentCategory = setCurrentCategory;
