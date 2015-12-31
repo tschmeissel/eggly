@@ -22,9 +22,12 @@
 					}
 				}
 			})
+			
+		console.log('categories module config called');
 	})
 	
-	categories.controller('CategoriesCtrl', function CategoriesCtrl($scope) {
+	categories.controller('CategoriesCtrl', function CategoriesCtrl($scope, $log) {
+		$log.debug('categories ctrl called');
 	})
 	
 })();
