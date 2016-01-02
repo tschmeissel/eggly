@@ -27,7 +27,9 @@
 		
 		// set the category name in this state so it can be accessed from the template
 		bookmarksListCtrl.currentCategoryName = $stateParams.category;
-		bookmarksListCtrl.bookmarks = BookmarksModel.getBookmarks();
+		BookmarksModel.getBookmarks()
+			.then(function(result) {
+				bookmarksListCtrl.bookmarks = result;
+			});
 	})
-	
 })();

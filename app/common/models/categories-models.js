@@ -1,18 +1,25 @@
 (function() {
 	angular.module('eggly.models.categories', [])
-		.service('CategoriesModel', function() {
-			var model = this;
+		.service('CategoriesModel', function($http) {
+			var model = this,
+			URLS = {
+				FETCH: 'data/categories.json'
+			},
+			// using this var along with the cache function seems to cause the browser to use the cache
+			categories;
 			
-			categories = [
-				{"id": 0, name: "Development"},
-				{"id": 1, name: "Design"},
-				{"id": 2, name: "Exercise"},
-				{"id": 3, name: "Humor"}
-			];
+			function extract(result) {
+				return result.data;
+			}
 			
-			model.getCategories = function() {
+			function cacheCategories(result) {
+				categories = extract(result);
 				return categories;
 			}
+			
+			// returns a promise
+			model.getCategories = function() {
+				return $http.get(URLS.FETCH).then(cacheCategories);
+			}
 		});
-
 })();

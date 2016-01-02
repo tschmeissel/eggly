@@ -26,7 +26,9 @@
 		$log.debug('categories ctrl called');
 		
 		var categoriesCtrl = this;
-		categoriesCtrl.categories = CategoriesModel.getCategories();
+		CategoriesModel.getCategories()
+			.then(function(result) {
+				categoriesCtrl.categories = result;
+			});
 	})
-	
 })();
