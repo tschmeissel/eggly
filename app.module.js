@@ -4,7 +4,9 @@
 	var app = angular.module('egglyApp', [
 		'ui.router',
 		'categories',
-		'categories.bookmarks'
+		'categories.bookmarks',
+		'eggly.models.bookmarks',
+		'eggly.models.categories'
 	]);
 	
 	app.config(function($logProvider) {

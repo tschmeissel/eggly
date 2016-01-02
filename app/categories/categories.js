@@ -13,12 +13,8 @@
 					// the '@' marks it as an absolute path
 					// meaning it targets this named view with any unamend state
 					'categories@': {
-						controller: 'CategoriesCtrl',
+						controller: 'CategoriesCtrl as categoriesCtrl',
 						templateUrl: 'app/categories/categories.tmpl.html'
-					},
-					'bookmarks@': {
-						controller: 'BookmarksCtrl',
-						templateUrl: 'app/categories/bookmarks/bookmarks.tmpl.html'
 					}
 				}
 			})
@@ -26,8 +22,11 @@
 		console.log('categories module config called');
 	})
 	
-	categories.controller('CategoriesCtrl', function CategoriesCtrl($scope, $log) {
+	categories.controller('CategoriesCtrl', function CategoriesCtrl($scope, $log, CategoriesModel) {
 		$log.debug('categories ctrl called');
+		
+		var categoriesCtrl = this;
+		categoriesCtrl.categories = CategoriesModel.getCategories();
 	})
 	
 })();
