@@ -1,7 +1,7 @@
 <NotepadPlus>
     <Session activeView="0">
-        <mainView activeIndex="11">
-            <File firstVisibleLine="375" xOffset="0" scrollWidth="960" startPos="11614" endPos="11614" selMode="0" lang="Normaler Text" encoding="65001" filename="C:\Users\zaphod\GMX MediaCenter\scratch.txt" backupFilePath="C:\Users\zaphod\AppData\Roaming\Notepad++\backup\scratch.txt@2016-01-02_170039" originalFileLastModifTimestamp="1451732241" />
+        <mainView activeIndex="1">
+            <File firstVisibleLine="368" xOffset="0" scrollWidth="960" startPos="11614" endPos="11614" selMode="0" lang="Normaler Text" encoding="65001" filename="C:\Users\zaphod\GMX MediaCenter\scratch.txt" backupFilePath="" originalFileLastModifTimestamp="1451837870" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="960" startPos="93" endPos="93" selMode="0" lang="HTML" encoding="-1" filename="J:\Projekte\apache-tomcat-7.0.41\webapps\eggly\index.html" backupFilePath="" originalFileLastModifTimestamp="1451694235" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="960" startPos="137" endPos="137" selMode="0" lang="JavaScript" encoding="-1" filename="J:\Projekte\apache-tomcat-7.0.41\webapps\eggly\app.module.js" backupFilePath="" originalFileLastModifTimestamp="1451753174" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="960" startPos="34" endPos="34" selMode="0" lang="JavaScript" encoding="-1" filename="J:\Projekte\apache-tomcat-7.0.41\webapps\eggly\MainCtrl.js" backupFilePath="" originalFileLastModifTimestamp="1451694235" />
