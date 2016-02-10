@@ -1,0 +1,14 @@
+(function() {
+	<form role="form" ng-sumbit="createBookmark(newBookmark)" novalidation>
+	<div>
+		<label for="newBookmarkTitle">Bookmark Title</label>
+		<input type="text" id="newBookmarkTitle" ng-model="newBookmark.title" placeholder="Enter title">
+	</div>
+	<div>
+		<label for="newBookmarkURL">Bookmark URL</label>
+		<input type="text" id="newBookmarkURL" ng-model="newBookmark.url" placeholder="Enter URL">
+	</div>
+	<button type="submit">Create</button>
+	<button type="button" ng-click="cancelCreating()">Cancel</button>
+	</form>
+})

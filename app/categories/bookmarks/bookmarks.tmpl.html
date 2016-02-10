@@ -1,5 +1,15 @@
-<div ng-repeat="bookmark in bookmarksListCtrl.bookmarks | filter:{category:bookmarksListCtrl.currentCategoryName} ">
+<div ng-repeat="bookmark in bookmarksListCtrl.bookmarks | filter:{category:bookmarksListCtrl.getCurrentCategoryName()} ">
 	<button type="button"><span>Edit</span></button>
 	<a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
 	<button type="button">&times;</button>
+	<button type="button"
+		ui-sref="eggly.categories.bookmarks.edit({{bookmarkId:bookmark.id}})">
+		Edit Bookmark
+	</button>
 </div>
+<hr>
+<ui-view ng-if="bookmarksListCtrl.getCurrentCategory()">
+	<button type"button" ui-sref="eggly.categories.bookmarks.create">
+		Create Bookmark
+	</button>
+</ui-view>

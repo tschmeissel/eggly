@@ -19,17 +19,22 @@
 		console.log('bookmarks module config called');
 	})
 	
-	bookmarks.controller('BookmarksCtrl', function($stateParams, $log, BookmarksModel) {
+	bookmarks.controller('BookmarksCtrl', function($stateParams, $log, BookmarksModel, CategoriesModel) {
 		// e.g. http://localhost:8080/eggly/#/categories/Design => $stateParams.category == 'Design'
 		$log.debug('current category: ' + $stateParams.category);
 		
 		var bookmarksListCtrl = this;
 		
 		// set the category name in this state so it can be accessed from the template
-		bookmarksListCtrl.currentCategoryName = $stateParams.category;
+		//bookmarksListCtrl.currentCategoryName = $stateParams.category;
+		CategoryModel.setCurrentCategory($stateParams.category);
+		
 		BookmarksModel.getBookmarks()
-			.then(function(result) {
-				bookmarksListCtrl.bookmarks = result;
+			.then(function(bookmarks) {
+				bookmarksListCtrl.bookmarks = bookmarks;
 			});
+		
+		bookmarksListCtrl.getCurrentCategory = CategoryModel.getCurrentCategory;
+		bookmarksListCtrl.getCurrentCategoryName = CategoryModel.getCurrentCategoryName;
 	})
 })();
