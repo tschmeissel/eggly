@@ -1,18 +1,15 @@
-(function () {
-    'use strict'
-
-    var bookmarks = angular.module('categories.bookmarks', [
-        'categories.bookmarks.create',
-        'categories.bookmarks.edit',
-        'eggly.models.categories',
-        'eggly.models.bookmarks'
-    ]);
-
-    bookmarks.config(function ($stateProvider) {
-
+angular.module('categories.bookmarks', [
+    'categories.bookmarks.create',
+    'categories.bookmarks.edit',
+    'eggly.models.categories',
+    'eggly.models.bookmarks'
+])
+    .config(function ($stateProvider) {
         $stateProvider
             .state('eggly.categories.bookmarks', {
                 url: 'categories/:category',
+                //target the named 'ui-view' in ROOT (eggly) state named 'bookmarks'
+                //to show bookmarks for a specific category
                 views: {
                     'bookmarks@': {
                         templateUrl: 'app/categories/bookmarks/bookmarks.tmpl.html',
@@ -20,18 +17,11 @@
                     }
                 }
             })
-
-        console.log('bookmarks module config called');
+        ;
     })
-
-    bookmarks.controller('BookmarksListCtrl', function ($stateParams, $log, BookmarksModel, CategoriesModel) {
-        // e.g. http://localhost:8080/eggly/#/categories/Design => $stateParams.category == 'Design'
-        $log.debug('current category: ' + $stateParams.category);
-
+    .controller('BookmarksListCtrl', function ($stateParams, CategoriesModel, BookmarksModel) {
         var bookmarksListCtrl = this;
 
-        // set the category name in this state so it can be accessed from the template
-        //bookmarksListCtrl.currentCategoryName = $stateParams.category;
         CategoriesModel.setCurrentCategory($stateParams.category);
 
         BookmarksModel.getBookmarks()
@@ -42,4 +32,6 @@
         bookmarksListCtrl.getCurrentCategory = CategoriesModel.getCurrentCategory;
         bookmarksListCtrl.getCurrentCategoryName = CategoriesModel.getCurrentCategoryName;
     })
-})();
+
+;
+

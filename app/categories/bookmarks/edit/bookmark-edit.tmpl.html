@@ -1,14 +1,14 @@
-(function() {
-	<form role="form ng-submit="updateBookmark(editedBookmark)" novalidate">
-		<div>
-			<label>Bookmark Title</label>
-			<input type="text" ng-model="editedBookmark.title" placeholder="Enter title">
-		</div>
-		<div>
-			<label>Bookmark URL</label>
-			<input type="text" ng-model="editedBookmark.url" placeholder="Enter URL">
-		</div>
-		<button type="submit">Save</button>
-		<button type="button" ng-click="cancelEditing()">Cancel</button>
-	</form>
-})
+<h4>Editing {{editedBookmark.title}}</h4>
+
+<form role="form ng-submit=" updateBookmark(editedBookmark)" novalidate">
+<div>
+    <label>Bookmark Title</label>
+    <input type="text" ng-model="editedBookmark.title" placeholder="Enter title">
+</div>
+<div>
+    <label>Bookmark URL</label>
+    <input type="text" ng-model="editedBookmark.url" placeholder="Enter URL">
+</div>
+<button type="submit">Save</button>
+<button type="button" ng-click="cancelEditing()">Cancel</button>
+</form>

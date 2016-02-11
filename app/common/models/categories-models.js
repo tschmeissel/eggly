@@ -4,8 +4,9 @@
 			var model = this,
 			URLS = {
 				FETCH: 'data/categories.json'
-			},
-			categories;
+            },
+
+			categories,
 			currentCategory;
 			
 			function extract(result) {

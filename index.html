@@ -1,23 +1,26 @@
 <!doctype html>
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-<script src="app.module.js"></script>
-<script src="app/categories/categories.js"></script>
-<script src="app/categories/bookmarks/bookmarks.js"></script>
-<script src="app/common/models/bookmarks-models.js"></script>
-<script src="app/common/models/categories-models.js"></script>
-<meta charset="UTF-8">
-<title>Eggly</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app/categories/categories.js"></script>
+    <script src="app/categories/bookmarks/bookmarks.js"></script>
+    <script src="app/categories/bookmarks/create/bookmark-create.js"></script>
+    <script src="app/categories/bookmarks/edit/bookmark-edit.js"></script>
+    <script src="app/common/models/bookmarks-models.js"></script>
+    <script src="app/common/models/categories-models.js"></script>
+    <meta charset="UTF-8">
+    <title>Eggly</title>
 </head>
 <body>
 
 <h1>Eggly</h1>
 
 <div ng-app="egglyApp">
-	<div>
-		<div ui-view="categories"></div>
-		<div ui-view="bookmarks"></div>
-	</div>
+    <div>
+        <div ui-view="categories"></div>
+        <div ui-view="bookmarks"></div>
+    </div>
 </div>
 </body>
